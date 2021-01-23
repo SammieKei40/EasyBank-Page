@@ -362,7 +362,7 @@ a img:hover{
     }
 
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
 
