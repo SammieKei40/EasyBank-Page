@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+        overflow-x: hidden;
 }
 
 
@@ -361,9 +361,6 @@ a img:hover{
 
     }
 
-    body{
-        overflow-x: hidden;
-    }
 
 
     header #btn{
