@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow-x: hidden;
+
 }
 
 
@@ -361,6 +361,10 @@ a img:hover{
 
     }
 
+    body{
+        overflow: hidden;
+    }
+
 
     header #btn{
         display: none;
@@ -428,12 +432,11 @@ a img:hover{
         background-size: 30px;
         background-position: center;
         cursor: pointer;
-        margin-left: 90px;
+        margin-left: 35%;
         transition:  0.5s ease-in;
     }
 
     .toggle.active{
-        position: relative;
         width: 60px;
         height: 60px;
         background-image: url('./images/icon-close.svg');
@@ -441,7 +444,6 @@ a img:hover{
         background-size: 25px;
         background-position: center;
         cursor: pointer;
-        margin-left: 90px;
         transition:  0.5s ease-in;
     }
 
@@ -471,7 +473,7 @@ a img:hover{
 
 
     .text h1{
-        margin-top: -130px;
+        margin-top: -110px;
        font-size: 45px;
         min-width: 180px;
         letter-spacing: 2px;
@@ -480,9 +482,13 @@ a img:hover{
     }
 
     .text p{
-        display: block;
-        min-width:200px;
-        font-size: 17px;
+
+        position: relative;
+        left: 9%;
+        text-align: center;
+        max-width:410px;
+        word-wrap: break-word;
+        font-size: 16px;
         font-weight: 400;
     }
 
