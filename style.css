@@ -16,8 +16,7 @@ body{
 
 
 
-@media screen and (max-width: 768px) and (device-width: 480px) 
-and (device-height: 800px)  and (orientation: landscape){
+@media (max-width: 768px) and (min-width: 789px){
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
