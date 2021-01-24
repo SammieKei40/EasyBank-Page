@@ -534,42 +534,55 @@ a img:hover{
         text-align: center;
     }
 
-    .footer-left {
-        margin: 1em;
-     display: grid;
-     align-items: center;
-     justify-content: center;
-    }
-    
-    .footer-left #img-left{
-        width: 222px;
-        background-color: hsl(0, 0%, 100%);
+    .footer{
+        padding: 15px;
+        display: block;
     }
 
-    .socials a img{
-        display: inline-block;
+    .footer-left {
+        margin-left: 0;
+        text-align: center;
+    margin-bottom: 1em;
+    }
+    
+    
+    .footer ul {
+    list-style: none;
+    padding-left: 0;
+    }
+    
+    
+    
+    
+    .footer-right {
+    display: block;
+text-align: center;
     }
     
     .footer-right > *{
-        flex: 1 50%;
-        margin-left: 9em;
+    margin-right: 1px;
+    display: grid;
+    
     }
+    
+    .footer-left #img-left {
+        width: 25%;
+        margin-bottom: 2%;
+    } 
 
-    .footer-right{
-        display: inline-block;
+
+    .footer-right > * {
+        flex: 1;
+        }
         
-    }
-    
-    .footer li{
-        line-height: 2em;
-    }
-    
-    .box a{
-        margin: 0;
-        margin-right: 0;
-    
-    }
-
+        
+        .footer-left {
+        flex: 1 0px;
+        }
+        
+        .footer-right {
+        flex: 2 0px;
+        }            
     .demo{
         margin-left: 91px;
         padding: 30px;
