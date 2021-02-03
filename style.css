@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -10,8 +11,7 @@ body{
     color: #000;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-        overflow-x: hidden;
+
 }
 
 
@@ -30,7 +30,7 @@ body{
     'footer footer footer footer footer footer'
     'footer footer footer footer footer footer';
     
-    margin: 0 auto;
+
    }
 }
 
@@ -168,12 +168,12 @@ section{
     grid-area: section;
 }
 
-section #h1{
+section h1{
     font-size: 2em;
     font-weight: 800;
 }
 
-section #p{
+section p{
     max-width: 600px;
 }
 
@@ -192,16 +192,13 @@ section #p{
     position: relative;
     padding: 20px 20px 20px;   
     text-align: left;
-    overflow: hidden;
-    line-height: 1.6em;
-    word-spacing: 0.2em;
-    letter-spacing: 2px;
+    overflow: hidden;   
     margin-top: 9px;
 }
 
 
 .showcase img{
-
+    padding-bottom: 1em;
     transition-duration: 2s;
 }
 
@@ -209,11 +206,20 @@ section #p{
     transform:  scale(1.1);
 }
 
+.showcase h1{
+    padding-bottom: 10px;
+}
+
 
 aside{
     background-color:hsl(0, 0%, 98%);
     grid-area: aside;
     padding: 9%;
+}
+
+aside h1{
+    font-size: 2em;
+    font-weight: 800;
 }
 
 .case{
@@ -232,13 +238,16 @@ aside{
     padding: 20px 20px 20px;   
     text-align: left;
     overflow: hidden;
-    line-height: 1.2em;
-    word-spacing: 0.2em;
-    letter-spacing: 2px;
+   
+}
+
+.case1 h2{
+    padding-bottom: 10px;
 }
 
 .case1 img{
     transition-duration: 2s;
+    padding-bottom: 1em;
 }
 
 .case1 img:hover{
@@ -270,7 +279,7 @@ footer{
 }
 
 .footer-left {
-    margin-left: 5em;
+    margin-left: 2em;
     padding: 30px;
 }
 
@@ -281,7 +290,7 @@ footer{
 
 .footer ul{
     list-style: none;
-    padding-left: 20px;
+    padding-left: 10px;
     display: inline-block;
 }
 
@@ -300,7 +309,7 @@ footer a{
     display: -o-flex;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
@@ -348,9 +357,7 @@ a img:hover{
 
 
   @media (min-width: 600px){
-        .footer-right > *{
-            flex: 1 0px;
-        }
+        
 
         .footer-left{
             flex: 1 0px;
@@ -370,8 +377,8 @@ a img:hover{
 
 @media (max-width: 600px){
     .grid-container{
-        grid-template-columns: repeat(auto-fit, 1fr);
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
         'header'
         'main'
@@ -379,6 +386,10 @@ a img:hover{
         'aside'
         'footer ';
 
+    }
+
+    body{
+        overflow-x: hidden;
     }
 
 
@@ -390,7 +401,7 @@ a img:hover{
 
     header{
         display: block;
-        padding-top: 10px;
+        padding-top: 5px;
         
     }
 
@@ -398,13 +409,12 @@ a img:hover{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        
 
     }
 
     nav{
         display: grid;
-        justify-content: center;
+
         align-items: center;
         
     }
@@ -432,10 +442,10 @@ a img:hover{
         align-items: center;
          background-color: hsl(0, 0%, 98%);
          border-radius: 20px;
-         width: 95vw;
-         min-height: 45vh;
+         width: 75vw;
+         min-height: 65vh;
 
-
+ 
      }
 
 
@@ -449,17 +459,13 @@ a img:hover{
         background-size: 30px;
         background-position: center;
         cursor: pointer;
-        margin-left: 35%;
+        margin-left: auto;
         transition:  0.5s ease-in;
     }
 
     .toggle.active{
-        width: 60px;
-        height: 60px;
         background-image: url('./images/icon-close.svg');
         background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: center;
         cursor: pointer;
         transition:  0.5s ease-in;
     }
@@ -479,7 +485,9 @@ a img:hover{
     }
     
     #img1{
-        width: 450px;
+        width: 395px;
+        right: 10px;
+        position: relative;
     }
     
     #img2{
@@ -490,8 +498,8 @@ a img:hover{
 
 
     .text h1{
-        margin-top: -110px;
-       font-size: 45px;
+        margin-top: -21%;
+        font-size: 45px;
         min-width: 180px;
         letter-spacing: 2px;
         text-align: center;
@@ -499,12 +507,10 @@ a img:hover{
     }
 
     .text p{
-
         position: relative;
-        left: 5%;
+        left: 4%;
         text-align: center;
-        max-width:410px;
-        word-wrap: break-word;
+        max-width:400px;
         font-size: 16px;
         font-weight: 400;
     }
@@ -525,7 +531,12 @@ a img:hover{
 
     section h1{
         text-align: center;
+        
     }
+    section p{
+        text-align: center;
+    }
+
     aside h1{
         text-align: center;
     }
@@ -536,7 +547,7 @@ a img:hover{
 
     .footer{
         padding: 15px;
-        display: block;
+        display: grid;
     }
 
     .footer-left {
@@ -544,29 +555,23 @@ a img:hover{
         text-align: center;
     margin-bottom: 1em;
     }
-    
-    
-    .footer ul {
-    list-style: none;
-    padding-left: 0;
-    }
-    
+         
     
     
     
     .footer-right {
-    display: block;
+    display: grid;
 text-align: center;
     }
     
     .footer-right > *{
     margin-right: 1px;
-    display: grid;
+    display: flex;
     
     }
     
     .footer-left #img-left {
-        width: 25%;
+        width: 50%;
         margin-bottom: 2%;
     } 
 
@@ -591,4 +596,3 @@ text-align: center;
     
     
 }
-
